@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MQL-Yk-obZ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DIO Noticias-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NewsListViewController" customModule="DioNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kIr-DP-KD8">
+                                <rect key="frame" x="0.0" y="155" width="393" height="663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexColor" systemColor="secondarySystemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kIr-DP-KD8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="H9h-p9-BEl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kIr-DP-KD8" secondAttribute="bottom" id="QZR-qa-gG8"/>
+                            <constraint firstItem="kIr-DP-KD8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gS5-aD-d9e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kIr-DP-KD8" secondAttribute="trailing" id="ske-7y-h4g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DIO Noticias" id="oW5-Lw-z2D" colorLabel="IBBuiltInLabel-Red"/>
+                    <connections>
+                        <outlet property="newsListTableView" destination="kIr-DP-KD8" id="VaV-Zl-hoH"/>
+                        <segue destination="su5-Xz-X8V" kind="show" identifier="ShowNewsViewController" id="7YO-Xj-JB6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="492" y="-114"/>
+        </scene>
+        <!--Titulo-->
+        <scene sceneID="s90-G4-0cq">
+            <objects>
+                <viewController id="su5-Xz-X8V" customClass="NewsViewController" customModule="DioNews" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N8M-FT-tjX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TYe-Xb-SSE">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="f2h-1r-eqL">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5rQ-jf-i1L"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f2h-1r-eqL" firstAttribute="centerX" secondItem="N8M-FT-tjX" secondAttribute="centerX" id="88w-4g-Dmg"/>
+                            <constraint firstItem="5rQ-jf-i1L" firstAttribute="bottom" secondItem="TYe-Xb-SSE" secondAttribute="bottom" id="C4p-lV-rRS"/>
+                            <constraint firstItem="5rQ-jf-i1L" firstAttribute="bottom" secondItem="TYe-Xb-SSE" secondAttribute="bottom" id="M86-R0-625"/>
+                            <constraint firstItem="TYe-Xb-SSE" firstAttribute="top" secondItem="5rQ-jf-i1L" secondAttribute="top" id="Q7Z-6x-LGq"/>
+                            <constraint firstItem="TYe-Xb-SSE" firstAttribute="top" secondItem="5rQ-jf-i1L" secondAttribute="top" id="Vgb-Ne-IES"/>
+                            <constraint firstItem="5rQ-jf-i1L" firstAttribute="trailing" secondItem="TYe-Xb-SSE" secondAttribute="trailing" id="hs8-nE-GlT"/>
+                            <constraint firstItem="f2h-1r-eqL" firstAttribute="centerY" secondItem="N8M-FT-tjX" secondAttribute="centerY" id="i8a-wb-HEg"/>
+                            <constraint firstItem="5rQ-jf-i1L" firstAttribute="trailing" secondItem="TYe-Xb-SSE" secondAttribute="trailing" id="lgg-k3-SPP"/>
+                            <constraint firstItem="TYe-Xb-SSE" firstAttribute="leading" secondItem="5rQ-jf-i1L" secondAttribute="leading" id="nSx-vA-2mm"/>
+                            <constraint firstItem="TYe-Xb-SSE" firstAttribute="leading" secondItem="5rQ-jf-i1L" secondAttribute="leading" id="pB4-OB-dWU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Titulo" largeTitleDisplayMode="never" style="editor" customizationIdentifier="title" id="6Es-EU-gqf"/>
+                    <connections>
+                        <outlet property="loadingActivityIndicator" destination="f2h-1r-eqL" id="FCm-Mt-TuA"/>
+                        <outlet property="newsWebView" destination="TYe-Xb-SSE" id="6bK-a0-sfQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAV-Zl-xsC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1314" y="-114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5lT-F1-sdZ">
+            <objects>
+                <navigationController id="MQL-Yk-obZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="1p1-Mn-uNq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="barTintColor" systemColor="systemTealColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                            <color key="textShadowColor" systemColor="labelColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                            <color key="textShadowColor" systemColor="labelColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vBt-8O-pbc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O3Y-yM-Db4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-360" y="-114"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0F33A105-3CFD-400E-8A7A-1189785051C2"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09381EAB-1AD8-40EC-BF6C-D7D580E2422D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DioNews/DataProvider/LocalRepository/NewsListRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getNewList(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "09381EAB-1AD8-40EC-BF6C-D7D580E2422D - f3275fbfc1a8e66f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DioNews.NewsListRepository.getNewList(completion: (Swift.Optional&lt;Swift.Array&lt;DioNews.NewsModel&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DioNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gilvanwemerson/Documents/Cursos%20Dio/DioNews/DioNews/DataProvider/LocalRepository/NewsListRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "09381EAB-1AD8-40EC-BF6C-D7D580E2422D - f3275fbfc1a8e66f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DioNews.NewsListRepository.getNewList(completion: (Swift.Optional&lt;Swift.Array&lt;DioNews.NewsModel&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DioNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gilvanwemerson/Documents/Cursos%20Dio/DioNews/DioNews/DataProvider/LocalRepository/NewsListRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "432">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
